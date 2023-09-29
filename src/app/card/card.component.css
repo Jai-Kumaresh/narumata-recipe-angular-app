@@ -1,0 +1,39 @@
+#des{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.card-img-top{
+    width: 250px;
+  height: 200px; 
+  object-fit: cover;
+}
+.card{
+    border: 2px solid black;
+}
+#add{
+  float:right;
+  margin: 15px;
+}
+#del{
+  float:right;
+}
+.card-body{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.card-title{
+  font-style: italic;
+  text-align: center;
+  font-weight: 900;
+}
+.card-text{
+  font-family:serif;
+}
+h1{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  margin: 15px;
+}

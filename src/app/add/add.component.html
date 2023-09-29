@@ -1,0 +1,39 @@
+<div class="container">
+<div id="addbtn">
+          <form #add="ngForm" (ngSubmit)="addNew(add.value)" >
+            <h3>Recipes for Our Kitchen</h3>
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingtitle" placeholder="Title" name="title" ngModel required #title="ngModel">
+              <label for="floatingtitle">Title</label>
+            </div>
+            <span *ngIf="title.invalid && title.touched" style="color: red;">Please enter a valid title</span>
+            <br>
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingdes" placeholder="description" name="description" ngModel required #description="ngModel">
+              <label for="floatingdes">Description</label>
+            </div>
+            <span *ngIf="description.invalid && description.touched" style="color: red;">Please enter a valid description</span>
+            <br>
+            <div class="form-floating">
+              <input type="number" class="form-control" id="floatingdur" placeholder="duration" name="duration" ngModel required #duration="ngModel">
+              <label for="floatingdur">Duration</label>
+            </div>
+            <span *ngIf="duration.invalid && duration.touched" style="color: red;">Please enter valid duration</span>
+            <br>
+            <div class="button-group">
+              <div class="row">
+                <div class="col">
+                  <button type="submit" class="btn btn-outline-success" id="add1">
+                    CREATE
+                  </button>
+                </div>
+                <div class="col">
+                  <button type="button" class="btn btn-outline-danger" id="cancel" (click)="cancelOperation()">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+    </div>
+  </div>

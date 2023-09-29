@@ -1,0 +1,19 @@
+#del{
+    float: right;
+}
+
+.card{
+    border: 2px solid black;
+    height: 500px;
+   
+}
+.card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to display */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body{
+    background-color: rgb(238, 196, 118);
+}

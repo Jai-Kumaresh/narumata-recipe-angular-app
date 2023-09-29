@@ -1,0 +1,35 @@
+<body>
+  <div class="header">
+    <div class="row">
+      <div class="col">
+        <h1>Our Recipes</h1>
+      </div>
+      <div class="col">
+        <button id="add" class="btn btn-outline-dark" (click)="goAdd()">Add new Recipes <fa-icon [icon]="faSquarePlusIcon"></fa-icon></button>      </div>
+    </div>
+  </div>
+  <div class="container">
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let item of recipeList; let i = index">
+        <ng-template carouselSlide>
+          <div class="col-lg-4 mt-5">
+            <div class="card card-deck" style="width: 18rem;" [attr.id]="'card-' + i">
+              <img [src]="'assets/img/recipe' + (i + 1) + '.jpg'" class="card-img-top img-fluid" alt="Recipe Image">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text" id="des">{{ item.description }}</p>
+                <p>Duration: {{ item.duration }} Mins</p>
+                <p>Created {{ item.date | timeAgo}} </p>
+                <button id="edit" class="btn btn-outline-success" [routerLink]="'/edit/' + item.id" > <fa-icon [icon]="faPenIcon"></fa-icon></button>
+                <button type="button" class="btn btn-outline-danger" id="del" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <fa-icon [icon]="faTrashIcon"></fa-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</body>
+
